@@ -1,0 +1,168 @@
+@import "bootstrap";
+
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+  text-align: center;
+}
+
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+.welcome-box {
+
+  background-color: #DBF1DB;
+  border-radius: 8px;
+  margin-top: 20px;
+
+}
+
+.inner-box {
+  float: left;
+  width: 30%;
+  padding: 10%;
+}
+
+.KA-label {
+  width: 80%;
+  padding: 2% 5%;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.read-article {
+  background-color: #E2F1FF;
+  min-height: 80px;
+  border-radius: 5px;
+  padding: 2% 3%;
+}
+
+.articles-list ol {
+list-style: none;
+  margin: 10px 0 0 0;
+  
+  li {
+    padding: 10px 5px;
+    border-top: 1px solid #e8e8e8;
+    border-left: 5px solid;
+  }
+}
+
+.timestamp {
+  color: $grayLight;
+}
+
+.control-ribbon {
+  width: 100%;
+}
+.control-ribbon btn {
+  float: left;
+}
+
+.ribbon-element {
+
+ float: left;
+ margin-right: 5px;
+
+}
+
+.ribbon-element input {
+  display: inline;
+}

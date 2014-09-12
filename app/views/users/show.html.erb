@@ -1,0 +1,12 @@
+<h1><%= current_user.name %></h1>
+<div class="row">
+	<div class="articles-list span8 offset2 ">
+	    <% if @user.articles.any? %>
+	      <h3>Articles (<%= @user.articles.count %>)</h3>
+	      <ol>
+	        <%= render @articles%>
+	      </ol>
+	      <%= will_paginate @articles %>
+	    <% end %>
+	</div>
+</div>

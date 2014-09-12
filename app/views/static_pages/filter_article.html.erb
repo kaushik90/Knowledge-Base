@@ -1,0 +1,42 @@
+<% if signed_in? %>
+	
+	<h1>Articles Found </h1>
+	<div class="row">
+		<div class="articles-list span8 offset2">
+			<div class="control-ribbon">
+				<div class="ribbon-element">	<%= link_to "Write new article", new_article_path, class: "btn btn-small btn-primary"%></div>
+				<div class="ribbon-element"><%= link_to "Labels", labels_path, class: "btn btn-small btn-primary"%></div>
+				<div class="ribbon-element">
+					<%= form_tag search_path do %>
+						<%= text_field_tag :q, params[:q] %>
+						<%= submit_tag "Search", class: "btn btn-small btn-success" %>
+	    			<% end %>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+	<div class="row">
+		<div class="articles-list span8 offset2">
+			<%if @articles.count !=0 %>
+		    	<div class="article-list-home">
+					<h3>Articles (<%= @articles.count %>)</h3>
+				    <ol>
+				        <%= render @articles%>
+				    </ol>
+				</div>
+			<%else%>
+				<h3>No article found matching to your query</h3>
+			<%end%>
+		</div>
+	</div>
+			
+<% else %>
+<div class ="row">
+	<div class="span6 offset3">
+		<div class="span6 welcome-box">
+			<div class="inner-box"><h2><%= link_to "Sign in", signin_path %></h2></div>
+			<div class="inner-box"><h2><%= link_to "Sign up", signup_path %></h2></div>
+		</div>
+	</div>
+</div>
+<% end %>

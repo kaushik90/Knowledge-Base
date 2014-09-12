@@ -1,0 +1,17 @@
+<div class ="row">
+	<div class="span8 offset2">
+		<h2><%= @article.title %></h2>
+		<hr>
+		<div class="read-article">
+		<%= @article.content.html_safe%>
+		</div>
+		<br>
+		<% if current_user?(@article.user) %>
+    		<%= link_to "Delete Article", @article, class: "btn-small btn-danger", method: :delete,
+                                     confirm: "You sure?",
+                                     title: @article.title %>
+
+            <%= link_to "Edit Article", edit_article_path, class: "btn-small btn-danger" %>
+  		<% end %>
+	</div>
+</div>

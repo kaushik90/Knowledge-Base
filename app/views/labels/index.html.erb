@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="span6 offset3">
+		<ol>
+			<% @label.each do |l| %>
+			<div class="KA-label" style="background-color:<%=l.color%>;"><%= l.name%></div>
+			<% end %>
+		</ol>
+		<hr>
+		<%= link_to "Add new Label", new_label_path, class: "btn btn-small btn-primary"%>
+	</div>
+</div>

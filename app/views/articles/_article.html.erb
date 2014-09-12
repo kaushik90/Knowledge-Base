@@ -1,0 +1,7 @@
+<li style="border-left-color:<%= tag_color (article.tag)%>">
+  <span class="content"><%= link_to article.title, article %></span>
+  <span class="content"><%= article.content.html_safe[0..70]%></span>
+  <span class="timestamp">
+    <br>Posted <%= time_ago_in_words(article.created_at) %> ago by <%=article.user.name%>.
+  </span>
+</li>
